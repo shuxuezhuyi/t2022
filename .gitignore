@@ -1,0 +1,14 @@
+*~
+*.swp
+*.eps
+*.pdf
+*#
+*.sav
+*.bak
+*.aux
+*.bbl
+*.blg
+*.log
+*.gz
+*.zip
+*.tmp

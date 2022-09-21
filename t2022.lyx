@@ -1,0 +1,1229 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties false
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+% 如果没有这一句命令，XeTeX会出错，原因参见
+% http://bbs.ctex.org/viewthread.php?tid=60547
+\DeclareRobustCommand\nobreakspace{\leavevmode\nobreak\ }
+
+\usepackage{fontspec}
+\emfontdeclare{\itshape,\upshape,\itshape}
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+\usepackage{xunicode}
+\usepackage{xeCJK}\setCJKmainfont[BoldFont={黑体},ItalicFont={楷体}]{宋体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{仿宋} % 打印机字体, 一般用于 verbatim 之类的环境, 或者通过 \ttfamily 调用
+
+% 证明与提示
+\newenvironment{Proof}[1][证明]
+{\noindent\normalfont {\bfseries #1}\hphantom{空}}{\hfill\ensuremath{\square}}
+
+\newenvironment{HINT}[1][提示]{\noindent\normalfont {\bfseries #1}\hphantom{空}}{\hfill\ensuremath{\square}}
+
+%多栏排版
+\setlength\columnseprule{.4pt}
+\end_preamble
+\options UTF8,oneside
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-chap
+tcolorbox
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+Format 66
+Provides stdinsets 1
+
+InsetLayout Flex:ProofAsInset
+   LyXType     custom
+   LatexName   proof
+   LatexType   Environment
+   Decoration  classic
+   Argument 1
+     LabelString         "Proof Name"
+   EndArgument
+   BgColor background
+   MultiPar    true
+   LabelString Proof
+	ResetsFont true
+End
+
+InsetLayout Flex:HINTAsInset
+   CopyStyle   Flex:ProofAsInset
+   LatexName   HINT
+   LabelString HINT
+End
+\end_local_layout
+\language chinese-simplified
+\language_package none
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics xetex
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command biber -l zh__pinyin
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plain
+\biblio_options url=false
+\biblatex_bibstyle numeric
+\biblatex_citestyle numeric
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 3cm
+\rightmargin 2.5cm
+\bottommargin 2.8cm
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+2020084号草稿: 拓扑学
+\end_layout
+
+\begin_layout Standard
+主要是从2022年湖大数院本科拓扑学课程同学们的作业中收集错误解法, 并评论.
+ 亦有收录正确解法.
+\end_layout
+
+\begin_layout Standard
+本文档源代码托管于 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/shuxuezhuyi/t2022
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+作业
+\end_layout
+
+\begin_layout Exercise
+假设关系
+\begin_inset Formula $V$
+\end_inset
+
+是对称的和传递的, 则因为
+\begin_inset Formula $V$
+\end_inset
+
+是对称的, 所以, 若
+\begin_inset Formula $aVb$
+\end_inset
+
+, 则
+\begin_inset Formula $bVa$
+\end_inset
+
+, 又
+\begin_inset Formula $V$
+\end_inset
+
+是传递的, 由
+\begin_inset Formula $aVb$
+\end_inset
+
+和
+\begin_inset Formula $bVa$
+\end_inset
+
+得
+\begin_inset Formula $aVa$
+\end_inset
+
+, 从而
+\begin_inset Formula $V$
+\end_inset
+
+也是自反的.
+ 请找出上述讨论的错误之处.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+对称性和传递性只跟
+\begin_inset Formula $V$
+\end_inset
+
+有关, 而自反性需要考查
+\begin_inset Formula $X$
+\end_inset
+
+内所有元素.
+ 上述过程仅仅验证了
+\begin_inset Formula $X$
+\end_inset
+
+中具有对称性和传递性的元素具有自反性.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+评: 完全错误.
+ 单把一个元素拎出来根本没法谈论自反性、对称性、传递性, 没有任何一个元素可以说“具有”这三种性质.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+不可以, 因为传递性需要3个变量, 即
+\begin_inset Formula $aVb$
+\end_inset
+
+, 
+\begin_inset Formula $bVc\rightarrow aVc$
+\end_inset
+
+, 所以该证明过程是错误的.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+传递性
+\begin_inset Formula $aVb$
+\end_inset
+
+, 
+\begin_inset Formula $bVc$
+\end_inset
+
+, 则
+\begin_inset Formula $aVc$
+\end_inset
+
+, 其中
+\begin_inset Formula $a\neq c$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+对称性论断是正确的, 但是传递性论断是无中生有.
+ 此处
+\begin_inset Formula $aVb$
+\end_inset
+
+和
+\begin_inset Formula $bVa$
+\end_inset
+
+实际上只是一个关系而非两个, 因为
+\begin_inset Formula $aVb$
+\end_inset
+
+蕴含
+\begin_inset Formula $bVa$
+\end_inset
+
+, 所以
+\begin_inset Formula $aVb$
+\end_inset
+
+且
+\begin_inset Formula $bVa$
+\end_inset
+
+是不符合传递性至少两个关系的条件的, 因而也得不出
+\begin_inset Formula $aVa$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+评: 传递性没有以上三个回答说的这些限制.
+ 令
+\begin_inset Formula $X=\{1\}$
+\end_inset
+
+, 
+\begin_inset Formula $V=\{(1,1)\}$
+\end_inset
+
+, 一样有传递性.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $X=\{1,2,3,4\}$
+\end_inset
+
+, 
+\begin_inset Formula $V=\{(1,2),(2,1),(1,1)\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $xVx$
+\end_inset
+
+不成立, 
+\begin_inset Formula $(2,2)$
+\end_inset
+
+、
+\begin_inset Formula $(3,3)$
+\end_inset
+
+、
+\begin_inset Formula $(4,4)$
+\end_inset
+
+都不在.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+评: 这个
+\begin_inset Formula $V$
+\end_inset
+
+不是传递的, 不构成反例.
+ “
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $xVx$
+\end_inset
+
+不成立”也不对, 因为存在
+\begin_inset Formula $1\in X$
+\end_inset
+
+, 使得
+\begin_inset Formula $1V1$
+\end_inset
+
+; 正确的说法是“‘
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $xVx$
+\end_inset
+
+’不成立”.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+上述所说的
+\begin_inset Formula $aVb$
+\end_inset
+
+与
+\begin_inset Formula $bVa$
+\end_inset
+
+推至
+\begin_inset Formula $aVa$
+\end_inset
+
+并不是传递性的特征.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+评: 恰恰相反, 这正是由传递性保证的.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+自反性指对于
+\begin_inset Formula $\forall a\in X$
+\end_inset
+
+, 有
+\begin_inset Formula $(a,a)\in V$
+\end_inset
+
+, 若存在
+\begin_inset Formula $a\in X$
+\end_inset
+
+, 
+\begin_inset Formula $\forall b\neq a\in X$
+\end_inset
+
+, 若有
+\begin_inset Formula $b$
+\end_inset
+
+与
+\begin_inset Formula $a$
+\end_inset
+
+无关系, 则上述成立, 则自反性不一定成立.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+评: 表达混乱.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+只证明了当
+\begin_inset Formula $(a,b)\in V$
+\end_inset
+
+时的自反性, 并未证明对于全集均自反.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+评: 自反是针对
+\series bold
+关系
+\series default
+定义的, 不要对着
+\series bold
+元素
+\series default
+或
+\series bold
+集合
+\series default
+讲自反.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+对称性是指两元素
+\begin_inset Formula $a,b$
+\end_inset
+
+, 若
+\begin_inset Formula $aVb$
+\end_inset
+
+, 则
+\begin_inset Formula $bVa$
+\end_inset
+
+.
+ 而自反性要求
+\begin_inset Formula $\forall a\in X$
+\end_inset
+
+, 有
+\begin_inset Formula $aVa$
+\end_inset
+
+, 上述讨论无法保证
+\begin_inset Formula $a$
+\end_inset
+
+的任意性.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+评: 未能指明要点.
+ 应当说明为什么
+\begin_inset Formula $a$
+\end_inset
+
+的任意性得不到保证.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+自反性的证明中对集合中任意一数都必须成立.
+ 若
+\begin_inset Formula $\exists a$
+\end_inset
+
+, 有
+\begin_inset Formula $b$
+\end_inset
+
+与
+\begin_inset Formula $a$
+\end_inset
+
+无关系, 则上述证明不成立.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+评: 集合的元素不一定是“数”.
+ 后面, 考虑
+\begin_inset Formula $X=\{1,2\}$
+\end_inset
+
+, 
+\begin_inset Formula $V=\{(1,1),(2,2)\}$
+\end_inset
+
+, 则存在
+\begin_inset Formula $a=1$
+\end_inset
+
+, 有
+\begin_inset Formula $b=2$
+\end_inset
+
+与
+\begin_inset Formula $a$
+\end_inset
+
+无关系, 但不妨碍
+\begin_inset Formula $V$
+\end_inset
+
+是等价关系（恒同关系）.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+定义中的自反性要求
+\begin_inset Formula $\forall x$
+\end_inset
+
+都有
+\begin_inset Formula $xVx$
+\end_inset
+
+.
+ 若不要求自反性, 一开始可能就不存在
+\begin_inset Formula $y$
+\end_inset
+
+, s.t.
+ 
+\begin_inset Formula $xVy$
+\end_inset
+
+, 自然也就没有后续证明.
+ 故原题中的证明只针对存在别的元素与之相关的那些
+\begin_inset Formula $a$
+\end_inset
+
+有
+\begin_inset Formula $aVa$
+\end_inset
+
+, 不能保证
+\begin_inset Formula $\forall a$
+\end_inset
+
+都成立.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+评: 叙述不够简明.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+不妨设
+\begin_inset Formula $V$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+上的一个关系.
+ 设定
+\begin_inset Formula $a$
+\end_inset
+
+为
+\begin_inset Formula $X$
+\end_inset
+
+中的一个元素, 对
+\begin_inset Formula $\forall b\in X$
+\end_inset
+
+, 
+\begin_inset Formula $aVb$
+\end_inset
+
+和
+\begin_inset Formula $bVa$
+\end_inset
+
+均不存在, 对于其它
+\begin_inset Formula $X$
+\end_inset
+
+中的元素, 
+\begin_inset Formula $V$
+\end_inset
+
+的对称性和传递性仍存在.
+ 显然此时关系
+\begin_inset Formula $V$
+\end_inset
+
+中不存在
+\begin_inset Formula $aVa$
+\end_inset
+
+这一关系, 无法得到自反性.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+评: 叙述不够清晰, 不如直接构造一个具体的反例.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+自反性要求对
+\begin_inset Formula $X$
+\end_inset
+
+中任意元素
+\begin_inset Formula $a$
+\end_inset
+
+都有
+\begin_inset Formula $aVa$
+\end_inset
+
+成立.
+ 依题目中说法, 只能推出
+\begin_inset Formula $X$
+\end_inset
+
+中部分元素满足
+\begin_inset Formula $aVa$
+\end_inset
+
+.
+ 举例: 
+\begin_inset Formula $X=\{1,2,3\}$
+\end_inset
+
+, 
+\begin_inset Formula $V=\{(1,2),(2,1),(1,1),(2,2)\}$
+\end_inset
+
+, 
+\begin_inset Formula $V$
+\end_inset
+
+是对称的和传递的, 但
+\begin_inset Formula $(3,3)\notin V$
+\end_inset
+
+, 则
+\begin_inset Formula $V$
+\end_inset
+
+在
+\begin_inset Formula $X$
+\end_inset
+
+上不是自反的.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+评: 有时候连“部分”元素也没有, 参见下一个回答.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+错误之处在于无法保证对所有元素
+\begin_inset Formula $a$
+\end_inset
+
+均有
+\begin_inset Formula $aVa$
+\end_inset
+
+.
+ 如非空集
+\begin_inset Formula $A$
+\end_inset
+
+上的空关系显然是对称与传递的, 但不自反.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+答
+\end_layout
+
+\end_inset
+
+该说法前提是假设了
+\begin_inset Formula $aVb$
+\end_inset
+
+.
+ 但对于任意
+\begin_inset Formula $a\in X$
+\end_inset
+
+, 不一定存在
+\begin_inset Formula $b\in X$
+\end_inset
+
+使
+\begin_inset Formula $aVb$
+\end_inset
+
+.
+ 故说法错误.
+ 如
+\begin_inset Formula $X=\{1,2,3,4,5\}$
+\end_inset
+
+, 
+\begin_inset Formula $V=\{(2,2),(3,3),(4,4)\}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+设
+\begin_inset Formula $S=\{(x,y)\in\mathbb{R}^{2}:y=x+1$
+\end_inset
+
+且
+\begin_inset Formula $0<x<2\}$
+\end_inset
+
+.
+ 请证明所有包含
+\begin_inset Formula $S$
+\end_inset
+
+的等价关系的交也是等价关系, 并写出这个等价关系的等价类.
+\end_layout
+
+\begin_layout Standard
+证明部分问题较少, 此处从略.
+ 错得多的是写出等价类
+\begin_inset Formula $V$
+\end_inset
+
+, 写法例如:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{(x,y)|y=x+1,0<x<2\}\cup\{(x,y)|y\neq x+1,x\in(0,2)\}\cup\{(x,y)|y\in\mathbb{R},x\geqslant2\,\text{或}\,x\leqslant0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V[x]=\{y|y=x+1,0<x<2\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $y=\begin{cases}
+x+1 & 0<x<2\\
+x & 0<x<3\\
+x-1 & 1<x<3
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V[x]=\{y|y\in(0,2),y-x\in\mathbb{Z}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V[x]=\begin{cases}
+S[x]=\{y\in\mathbb{R}|y=x+1\}, & \text{当}\,x\in(0,2)\\
+\varnothing, & \text{当}\,x\in(-\infty,0]\cup[2,+\infty)
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V[x_{1}]=\{x_{1}+1:x_{1}\in(0,2)\}$
+\end_inset
+
+; 
+\begin_inset Formula $V[x_{2}]=\{x_{2}:x_{2}\in\mathbb{R}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V[a]=\{a,a+1\}$
+\end_inset
+
+, 
+\begin_inset Formula $a\in(0,2)$
+\end_inset
+
+; 
+\begin_inset Formula $V[b]=\{b\}$
+\end_inset
+
+, 
+\begin_inset Formula $b\in\mathbb{R}/(0,2)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $[x]=\begin{cases}
+\{y|y-x\in\mathbb{Z},0<y<3\}, & \text{若}\,0<x<3\\
+\{x\}, & \text{其他}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $x<0$
+\end_inset
+
+且
+\begin_inset Formula $x>3$
+\end_inset
+
+时
+\begin_inset Formula $[x]=\{x\}$
+\end_inset
+
+单点集; 当
+\begin_inset Formula $0\leqslant x\leqslant1$
+\end_inset
+
+时
+\begin_inset Formula $[x]=\{x,x+1,x+2\}$
+\end_inset
+
+; 当
+\begin_inset Formula $1\leqslant x\leqslant2$
+\end_inset
+
+时
+\begin_inset Formula $[x]=\{x-1,x,x+1\}$
+\end_inset
+
+; 当
+\begin_inset Formula $2\leqslant x\leqslant3$
+\end_inset
+
+时
+\begin_inset Formula $\{x\}=\{x-2,x-1,x\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+正解: 当
+\begin_inset Formula $x\in(0,1)$
+\end_inset
+
+时
+\begin_inset Formula $V[x]=\{x,x+1,x+2\}$
+\end_inset
+
+; 
+\begin_inset Formula $V[1]=\{1,2\}$
+\end_inset
+
+; 当
+\begin_inset Formula $x\in(1,2)$
+\end_inset
+
+时
+\begin_inset Formula $V[x]=\{x-1,x,x+1\}$
+\end_inset
+
+; 
+\begin_inset Formula $V[2]=\{1,2\}$
+\end_inset
+
+; 当
+\begin_inset Formula $x\in(2,3)$
+\end_inset
+
+时
+\begin_inset Formula $V[x]=\{x-2,x-1,x\}$
+\end_inset
+
+; 当
+\begin_inset Formula $x\geqslant3$
+\end_inset
+
+或
+\begin_inset Formula $x\leqslant0$
+\end_inset
+
+时
+\begin_inset Formula $V[x]=\{x\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "reference"
+options "bibtotoc"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
