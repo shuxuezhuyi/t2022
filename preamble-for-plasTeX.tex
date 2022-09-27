@@ -1,0 +1,21 @@
+\documentclass[UTF8]{book}
+\setcounter{secnumdepth}{3}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+	\newtheorem{thm}{定理}
+\else
+	\newtheorem{thm}{定理}[chapter]
+\fi
+\theoremstyle{definition}
+\newtheorem{xca}[thm]{习题}
+
+\newenvironment{Checked}[1][评：]
+{\noindent\normalfont {\bfseries #1}}{}
+\makeatother

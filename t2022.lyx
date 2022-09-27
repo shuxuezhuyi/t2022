@@ -26,6 +26,9 @@
 
 \newenvironment{HINT}[1][提示]{\noindent\normalfont {\bfseries #1}\hphantom{空}}{\hfill\ensuremath{\square}}
 
+\newenvironment{Checked}[1][评. ]
+{\noindent\normalfont {\emph #1}}{}
+
 %多栏排版
 \setlength\columnseprule{.4pt}
 \end_preamble
@@ -47,18 +50,24 @@ InsetLayout Flex:ProofAsInset
    LatexType   Environment
    Decoration  classic
    Argument 1
-     LabelString         "Proof Name"
+     LabelString         "名称"
    EndArgument
    BgColor background
    MultiPar    true
-   LabelString Proof
+   LabelString "证明"
 	ResetsFont true
 End
 
 InsetLayout Flex:HINTAsInset
    CopyStyle   Flex:ProofAsInset
    LatexName   HINT
-   LabelString HINT
+   LabelString "提示"
+End
+
+InsetLayout Flex:CheckedAsInset
+   CopyStyle   Flex:ProofAsInset
+   LatexName   Checked
+   LabelString "评"
 End
 \end_local_layout
 \language chinese-simplified
@@ -262,8 +271,17 @@ status open
 \end_layout
 
 \begin_layout Standard
-评: 完全错误.
+\begin_inset Flex CheckedAsInset
+status open
+
+\begin_layout Plain Layout
+完全错误.
  单把一个元素拎出来根本没法谈论自反性、对称性、传递性, 没有任何一个元素可以说“具有”这三种性质.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -386,7 +404,11 @@ status open
 \end_layout
 
 \begin_layout Standard
-评: 传递性没有以上三个回答说的这些限制.
+\begin_inset Flex CheckedAsInset
+status open
+
+\begin_layout Plain Layout
+传递性没有以上三个回答说的这些限制.
  令
 \begin_inset Formula $X=\{1\}$
 \end_inset
@@ -396,6 +418,11 @@ status open
 \end_inset
 
 , 一样有传递性.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -450,7 +477,11 @@ status open
 \end_layout
 
 \begin_layout Standard
-评: 这个
+\begin_inset Flex CheckedAsInset
+status open
+
+\begin_layout Plain Layout
+这个
 \begin_inset Formula $V$
 \end_inset
 
@@ -480,6 +511,11 @@ status open
 \end_inset
 
 ’不成立”.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -517,7 +553,16 @@ status open
 \end_layout
 
 \begin_layout Standard
-评: 恰恰相反, 这正是由传递性保证的.
+\begin_inset Flex CheckedAsInset
+status open
+
+\begin_layout Plain Layout
+恰恰相反, 这正是由传递性保证的.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -567,7 +612,16 @@ status open
 \end_layout
 
 \begin_layout Standard
-评: 表达混乱.
+\begin_inset Flex CheckedAsInset
+status open
+
+\begin_layout Plain Layout
+表达混乱.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -597,7 +651,11 @@ status open
 \end_layout
 
 \begin_layout Standard
-评: 自反是针对
+\begin_inset Flex CheckedAsInset
+status open
+
+\begin_layout Plain Layout
+自反是针对
 \series bold
 关系
 \series default
@@ -610,6 +668,11 @@ status open
 集合
 \series default
 讲自反.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -660,12 +723,21 @@ status open
 \end_layout
 
 \begin_layout Standard
-评: 未能指明要点.
+\begin_inset Flex CheckedAsInset
+status open
+
+\begin_layout Plain Layout
+未能指明要点.
  应当说明为什么
 \begin_inset Formula $a$
 \end_inset
 
 的任意性得不到保证.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -704,7 +776,11 @@ status open
 \end_layout
 
 \begin_layout Standard
-评: 集合的元素不一定是“数”.
+\begin_inset Flex CheckedAsInset
+status open
+
+\begin_layout Plain Layout
+集合的元素不一定是“数”.
  后面, 考虑
 \begin_inset Formula $X=\{1,2\}$
 \end_inset
@@ -730,6 +806,11 @@ status open
 \end_inset
 
 是等价关系（恒同关系）.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -786,7 +867,16 @@ status open
 \end_layout
 
 \begin_layout Standard
-评: 叙述不够简明.
+\begin_inset Flex CheckedAsInset
+status open
+
+\begin_layout Plain Layout
+叙述不够简明.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -858,7 +948,16 @@ status open
 \end_layout
 
 \begin_layout Standard
-评: 叙述不够清晰, 不如直接构造一个具体的反例.
+\begin_inset Flex CheckedAsInset
+status open
+
+\begin_layout Plain Layout
+叙述不够清晰, 不如直接构造一个具体的反例.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -930,7 +1029,16 @@ status open
 \end_layout
 
 \begin_layout Standard
-评: 有时候连“部分”元素也没有, 参见下一个回答.
+\begin_inset Flex CheckedAsInset
+status open
+
+\begin_layout Plain Layout
+有时候连“部分”元素也没有, 参见下一个回答.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

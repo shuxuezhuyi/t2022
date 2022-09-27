@@ -1,0 +1,7 @@
+author: '数学主义'
+structure:
+  - type: standalone
+    topbar: False
+    source: t2022.tex
+    title: '2020084号草稿：拓扑学'
+build_pdf: false
