@@ -172,7 +172,7 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 主要是从2022年湖大数院本科拓扑学课程同学们的作业中收集错误解法, 并评论.
- 亦有收录正确解法.
+ 有时亦抄录正确解法.
 \end_layout
 
 \begin_layout Standard
@@ -1321,6 +1321,596 @@ S[x]=\{y\in\mathbb{R}|y=x+1\}, & \text{当}\,x\in(0,2)\\
 .
 \end_layout
 
+\begin_layout Remark
+我觉得题目改成
+\begin_inset Formula $S=\{(x,y)\in\mathbb{R}^{2}:y=x+1\}$
+\end_inset
+
+更好, 可以减少（我觉得没必要的）计算量.
+\end_layout
+
+\begin_layout Exercise
+设
+\begin_inset Formula $(X,T)$
+\end_inset
+
+是拓扑空间, 而
+\begin_inset Formula $X^{*}$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+和另一点
+\begin_inset Formula $*\notin X$
+\end_inset
+
+的并集.
+ 令
+\begin_inset Formula $T^{*}=T\cup\{X^{*}\}$
+\end_inset
+
+.
+ 证明: 
+\begin_inset Formula $(X^{*},T^{*})$
+\end_inset
+
+是拓扑空间.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\because$
+\end_inset
+
+ (1) 
+\begin_inset Formula $\because(X,T)$
+\end_inset
+
+为拓扑空间
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\therefore\varnothing\in T$
+\end_inset
+
+, 
+\begin_inset Formula $\therefore\varnothing,X^{*}\in T^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+(2) 
+\begin_inset Formula $\forall A,B\in T^{*}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+(a) 
+\begin_inset Formula $A,B\in T$
+\end_inset
+
+, 则
+\begin_inset Formula $A\cap B\in T\subset T^{*}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Plain Layout
+(b) 
+\begin_inset Formula $A,B\in\{X^{*}\}$
+\end_inset
+
+, 则
+\begin_inset Formula $A\cap B=X^{*}\subset T^{*}$
+\end_inset
+
+或
+\begin_inset Formula $A\cap B=\varnothing\subset T^{*}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Plain Layout
+(c) 若
+\begin_inset Formula $A\in T$
+\end_inset
+
+, 
+\begin_inset Formula $B\in X^{*}$
+\end_inset
+
+, 则
+\begin_inset Formula $A\cap B=X^{*}\subset T^{*}$
+\end_inset
+
+或
+\begin_inset Formula $A\cap B=\varnothing\subset T^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\therefore A\cap B\in T^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+(3) 
+\begin_inset Formula $\forall\alpha\in I$
+\end_inset
+
+, 
+\begin_inset Formula $A_{\alpha}\in T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall x\in\bigcup_{\alpha\in I}A_{\alpha}$
+\end_inset
+
+, 则
+\begin_inset Formula $\exists\alpha_{0}\in I$
+\end_inset
+
+, 
+\begin_inset Formula $x\in A_{\alpha_{0}}\in T^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $\therefore X\in T$
+\end_inset
+
+或
+\begin_inset Formula $X\in\{X^{*}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $X\in T\cup\{X^{*}\}$
+\end_inset
+
+, 即
+\begin_inset Formula $\bigcup_{\alpha\in I}A_{\alpha}\subset T\cup\{X^{*}\}=T^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\therefore(X^{*},T^{*}\}$
+\end_inset
+
+是拓扑空间.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+先来个语文改进版
+\end_layout
+
+\end_inset
+
+(1) 因为
+\begin_inset Formula $(X,T)$
+\end_inset
+
+是拓扑空间, 所以
+\begin_inset Formula $\varnothing\in T$
+\end_inset
+
+, 从而
+\begin_inset Formula $\varnothing\in T^{*}$
+\end_inset
+
+.
+ 另外, 由定义知
+\begin_inset Formula $X^{*}\in T^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+(2) 设
+\begin_inset Formula $A,B\in T^{*}$
+\end_inset
+
+, 有三种可能:
+\end_layout
+
+\begin_layout Plain Layout
+(2a) 若
+\begin_inset Formula $A,B\in T$
+\end_inset
+
+, 则
+\begin_inset Formula $A\cap B\in T\subset T^{*}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Plain Layout
+(2b) 若
+\begin_inset Formula $A,B\in\{X^{*}\}$
+\end_inset
+
+, 则
+\begin_inset Formula $A\cap B=X^{*}\subset T^{*}$
+\end_inset
+
+或
+\begin_inset Formula $A\cap B=\varnothing\subset T^{*}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Plain Layout
+(2c) 若
+\begin_inset Formula $A$
+\end_inset
+
+与
+\begin_inset Formula $B$
+\end_inset
+
+恰有一个属于
+\begin_inset Formula $T$
+\end_inset
+
+, 不妨设
+\begin_inset Formula $A\in T$
+\end_inset
+
+且
+\begin_inset Formula $B\in X^{*}$
+\end_inset
+
+, 则
+\begin_inset Formula $A\cap B=X^{*}\subset T^{*}$
+\end_inset
+
+或
+\begin_inset Formula $A\cap B=\varnothing\subset T^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+因此, 总有
+\begin_inset Formula $A\cap B\in T^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+(3) 任取集族
+\begin_inset Formula $\{A_{\alpha}\in T^{*}:\alpha\in I\}$
+\end_inset
+
+.
+ 设
+\begin_inset Formula $x\in\bigcup_{\alpha\in I}A_{\alpha}$
+\end_inset
+
+, 则存在
+\begin_inset Formula $\alpha_{0}\in I$
+\end_inset
+
+使得
+\begin_inset Formula $x\in A_{\alpha_{0}}\in T^{*}$
+\end_inset
+
+.
+ 于是
+\begin_inset Formula $x\in T$
+\end_inset
+
+或
+\begin_inset Formula $x\in\{X^{*}\}$
+\end_inset
+
+, 从而
+\begin_inset Formula $x\in T\cup\{X^{*}\}$
+\end_inset
+
+.
+ 由此可见
+\begin_inset Formula 
+\[
+\bigcup_{\alpha\in I}A_{\alpha}\subset T\cup\{X^{*}\}=T^{*}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+综上所述, 可知
+\begin_inset Formula $(X^{*},T^{*})$
+\end_inset
+
+是拓扑空间.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+指出下列证明过程中的不正确之处: 设
+\begin_inset Formula $\{A_{a}\}$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+的子集族, 
+\begin_inset Formula $\forall x\in\overline{\cup A_{a}}$
+\end_inset
+
+, 有
+\begin_inset Formula $x$
+\end_inset
+
+的任意邻域
+\begin_inset Formula $U$
+\end_inset
+
+与
+\begin_inset Formula $\cup A_{a}$
+\end_inset
+
+相交为非空.
+ 从而存在某个
+\begin_inset Formula $A_{a}$
+\end_inset
+
+, s.t.
+ 
+\begin_inset Formula $U\cap A_{a}\neq\varnothing$
+\end_inset
+
+, 即
+\begin_inset Formula $x\in\overline{A_{a}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+题目给出的这段证明, 本身表达就有很多问题, 但同学们视而不见, 也许可以修改一下让
+\strikeout on
+同学们关心的
+\strikeout default
+关键的逻辑错误更加突出: “设
+\begin_inset Formula $\{A_{a}\}$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+的子集族, 而
+\begin_inset Formula $x\in\overline{\cup A_{a}}$
+\end_inset
+
+, 那么
+\begin_inset Formula $x$
+\end_inset
+
+的任一邻域
+\begin_inset Formula $U$
+\end_inset
+
+都与
+\begin_inset Formula $\cup A_{a}$
+\end_inset
+
+相交非空, 于是存在某个
+\begin_inset Formula $A_{a}$
+\end_inset
+
+使得
+\begin_inset Formula $U\cap A_{a}\neq\varnothing$
+\end_inset
+
+, 从而由
+\begin_inset Formula $U$
+\end_inset
+
+的任意性可知
+\begin_inset Formula $x\in\overline{A_{a}}$
+\end_inset
+
+, 故
+\begin_inset Formula $x\in\bigcup\overline{A_{a}}$
+\end_inset
+
+.
+ 由此可见
+\begin_inset Formula $\overline{\cup A_{a}}\subset\bigcup\overline{A_{a}}$
+\end_inset
+
+.”
+\end_layout
+
+\begin_layout Exercise
+其它零星错误:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+若
+\begin_inset Formula $x\in(A\cup B)'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow\forall U\in N(x)$
+\end_inset
+
+, 
+\begin_inset Formula $U\cap((A\cup B)-\{x\})\neq\varnothing$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow U\cap((A-\{x\})\cup(B-\{x\}))\neq\varnothing$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow(U\cap(A-\{x\}))\cup(U\cap(B-\{x\}))\neq\varnothing$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow x\in A'$
+\end_inset
+
+或
+\begin_inset Formula $x\in B'\Rightarrow x\in A'\cup B'\Rightarrow(A\cup B)'\subset A'\cup B'$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+构造拓扑空间忘了带上空集, 例如以为
+\begin_inset Formula $\{X,\{a\}\}$
+\end_inset
+
+是
+\begin_inset Formula $X=\{a,b,c\}$
+\end_inset
+
+的一个拓扑.
+\end_layout
+
+\begin_layout Enumerate
+“反例”的英文是counterexample, 不是non-example.
+\end_layout
+
+\begin_layout Enumerate
+“任给
+\begin_inset Formula $x\in\overline{A}-\overline{B}$
+\end_inset
+
+, 则任意包含
+\begin_inset Formula $x$
+\end_inset
+
+的开集
+\begin_inset Formula $U$
+\end_inset
+
+都与
+\begin_inset Formula $A$
+\end_inset
+
+相交”不能写成``Any 
+\begin_inset Formula $x\in\overline{A}-\overline{B}$
+\end_inset
+
+, and any open set 
+\begin_inset Formula $U$
+\end_inset
+
+ containg 
+\begin_inset Formula $x$
+\end_inset
+
+ intersect 
+\begin_inset Formula $A$
+\end_inset
+
+.'' 可以写成``
+\color red
+Let
+\color inherit
+ 
+\begin_inset Formula $x\in\overline{A}-\overline{B}$
+\end_inset
+
+.
+ 
+\color red
+Then
+\color inherit
+ any open set 
+\begin_inset Formula $U$
+\end_inset
+
+ containing 
+\begin_inset Formula $x$
+\end_inset
+
+ intersect
+\color red
+s
+\color inherit
+ 
+\begin_inset Formula $A$
+\end_inset
+
+.''
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
