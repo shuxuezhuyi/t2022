@@ -9,6 +9,7 @@
 *.gz
 *.json
 *.log
+*.paux
 *.pdf
 *.sav
 *.swp
@@ -16,3 +17,5 @@
 *.tex
 *.zip
 build/
+t2022/
+src-for-plasTeX/__pycache__/

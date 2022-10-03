@@ -27,7 +27,7 @@
 \newenvironment{HINT}[1][提示]{\noindent\normalfont {\bfseries #1}\hphantom{空}}{\hfill\ensuremath{\square}}
 
 \newenvironment{Checked}[1][评. ]
-{\noindent\normalfont {\emph #1}}{}
+{\noindent\normalfont {\emph #1}}{\hfill $\blacksquare$}
 
 %多栏排版
 \setlength\columnseprule{.4pt}
@@ -184,6 +184,942 @@ status open
 
 https://github.com/shuxuezhuyi/t2022
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+另有网页版: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://shuxuezhuyi.github.io/topology
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+例子
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{E}^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $n$
+\end_inset
+
+维欧氏空间, 也记为
+\begin_inset Formula $(\mathbb{R}^{n},\tau_{e})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau_{t}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+平凡拓扑
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau_{s}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+离散拓扑
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau_{f}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+无穷集
+\begin_inset Formula $X$
+\end_inset
+
+上的余有限拓扑
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau_{c}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+不可数无穷集
+\begin_inset Formula $X$
+\end_inset
+
+上的余可数拓扑
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{E}^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\mathbb{R},\tau_{t})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\mathbb{R},\tau_{s})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\mathbb{R},\tau_{f})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\mathbb{R},\tau_{c})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+连通
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+道路连通
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+紧致
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+列紧
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hausdorff
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+可分
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+checkmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+×
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
 
 \end_inset
 
@@ -1672,6 +2608,348 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Flex CheckedAsInset
+status open
+
+\begin_layout Plain Layout
+这道题做错的同学不少, 基本上都是错在把
+\series bold
+集合
+\series default
+与
+\series bold
+集族
+\series default
+搞混淆、把
+\series bold
+属于
+\series default
+和
+\series bold
+包含
+\series default
+搞混淆、把单个元素
+\begin_inset Formula $*$
+\end_inset
+
+跟由这一个元素构成的集合
+\begin_inset Formula $\{*\}$
+\end_inset
+
+搞混淆.
+ 为了检查证明中的问题, 只要拿一个具体的例子去验证即可: 考虑拓扑空间
+\begin_inset Formula $(X_{1},T_{1})$
+\end_inset
+
+, 其中
+\begin_inset Formula $X_{1}=\{1\}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{1}=\{\varnothing,X_{1}\}$
+\end_inset
+
+; 取
+\begin_inset Formula $*=i$
+\end_inset
+
+, 从而
+\begin_inset Formula $X_{1}^{*}=\{1,i\}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{1}^{*}=\{\varnothing,\{1\},\{1,i\}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+“(2b) 若
+\begin_inset Formula $A,B\in\{X^{*}\}$
+\end_inset
+
+, 则
+\color blue
+ 
+\begin_inset Formula $A\cap B=X^{*}\subset T^{*}$
+\end_inset
+
+或
+\begin_inset Formula $A\cap B=\varnothing\subset T^{*}$
+\end_inset
+
+
+\color inherit
+”应改为“(2b) 若
+\begin_inset Formula $A,B\in\{X^{*}\}$
+\end_inset
+
+, 则
+\color red
+ 
+\begin_inset Formula $A\cap B=X^{*}\in T^{*}$
+\end_inset
+
+
+\color inherit
+”.
+ 集合
+\begin_inset Formula $\{X^{*}\}$
+\end_inset
+
+只有一个元素, 那就是
+\begin_inset Formula $X^{*}$
+\end_inset
+
+; 因此, 若
+\begin_inset Formula $A,B\in\{X^{*}\}$
+\end_inset
+
+, 则只能
+\begin_inset Formula $A=B=X^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+另外, 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+是一个集族, 已知
+\begin_inset Formula $X^{*}$
+\end_inset
+
+ 
+\color red
+属于
+\color inherit
+ 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+, 我们不知道
+\begin_inset Formula $T^{*}$
+\end_inset
+
+会不会
+\color red
+包含
+\color inherit
+ 
+\begin_inset Formula $X^{*}$
+\end_inset
+
+.
+ 但这里需要的不是
+\begin_inset Formula $X^{*}\subset T^{*}$
+\end_inset
+
+, 而是
+\begin_inset Formula $X^{*}\in T^{*}$
+\end_inset
+
+.
+ 一般来说, 不能指望
+\begin_inset Formula $T^{*}$
+\end_inset
+
+包含
+\begin_inset Formula $X^{*}$
+\end_inset
+
+, 例如开头的例子, 
+\begin_inset Formula $X_{1}^{*}$
+\end_inset
+
+就不是
+\begin_inset Formula $T_{1}^{*}$
+\end_inset
+
+的子集, 因为
+\begin_inset Formula $1$
+\end_inset
+
+和
+\begin_inset Formula $i$
+\end_inset
+
+都不是
+\begin_inset Formula $T_{1}^{*}$
+\end_inset
+
+的元素.
+ 但有时候
+\begin_inset Formula $X^{*}$
+\end_inset
+
+也有可能是
+\begin_inset Formula $T^{*}$
+\end_inset
+
+的子集, 例如考虑
+\begin_inset Formula $X_{2}=\{\varnothing\}$
+\end_inset
+
+与
+\begin_inset Formula $T_{2}=\{\varnothing,\{\varnothing\}\}$
+\end_inset
+
+, 取
+\begin_inset Formula $*=X_{2}=\{\varnothing\}$
+\end_inset
+
+, 则
+\begin_inset Formula $*\notin X_{2}$
+\end_inset
+
+; 此时
+\begin_inset Formula $X_{2}^{*}=X_{2}\cup\{*\}=\{\varnothing,\{\varnothing\}\}$
+\end_inset
+
+, 而
+\begin_inset Formula $T_{2}^{*}=T_{2}\cup\{X_{2}^{*}\}=\{\varnothing,\{\varnothing\},\{\varnothing,\{\varnothing\}\}\}$
+\end_inset
+
+, 这样就有
+\begin_inset Formula $X_{2}^{*}\subset T_{2}^{*}$
+\end_inset
+
+啦.
+\end_layout
+
+\begin_layout Plain Layout
+“(2c)……不妨设
+\begin_inset Formula $A\in T$
+\end_inset
+
+且
+\color blue
+ 
+\begin_inset Formula $B\in X^{*}$
+\end_inset
+
+
+\color inherit
+, 则
+\color blue
+ 
+\begin_inset Formula $A\cap B=X^{*}\subset T^{*}$
+\end_inset
+
+或
+\begin_inset Formula $A\cap B=\varnothing\subset T^{*}$
+\end_inset
+
+
+\color inherit
+”应改为“(2c)……不妨设
+\begin_inset Formula $A\in T$
+\end_inset
+
+且 
+\color red
+
+\begin_inset Formula $B=X^{*}$
+\end_inset
+
+
+\color inherit
+, 那么由
+\begin_inset Formula $A\subset X^{*}$
+\end_inset
+
+可知
+\color red
+ 
+\begin_inset Formula $A\cap B=A\in T\subset T^{*}$
+\end_inset
+
+
+\color inherit
+”.
+\end_layout
+
+\begin_layout Plain Layout
+(3)的证明目标应当是
+\begin_inset Formula $\bigcup A_{\alpha}\,{\color{red}\in}\,T^{*}$
+\end_inset
+
+, 而不是
+\begin_inset Formula $\bigcup A_{\alpha}\subset T^{*}$
+\end_inset
+
+.
+ 这一点搞错之后, 接下来整个证明路线都错了.
+ 不管证明路线, 单看各步骤, 仍有错误, 用
+\begin_inset Formula $(X_{1},T_{1})$
+\end_inset
+
+举例就会使错误变得更加显著: “取两个集合
+\begin_inset Formula $A_{1},A_{2}\in T_{1}^{*}$
+\end_inset
+
+组成集族, 其中
+\begin_inset Formula $A_{1}=\{1\}$
+\end_inset
+
+, 
+\begin_inset Formula $A_{2}=\{1,i\}$
+\end_inset
+
+; 取
+\begin_inset Formula $x=i\in A_{1}\cup A_{2}$
+\end_inset
+
+, 则
+\begin_inset Formula $i\in A_{2}\in T_{1}^{*}$
+\end_inset
+
+.
+ 于是
+\color blue
+ 
+\begin_inset Formula $i\in T_{1}$
+\end_inset
+
+或
+\begin_inset Formula $i\in\{X_{1}^{*}\}$
+\end_inset
+
+
+\color inherit
+, 从而
+\color blue
+ 
+\begin_inset Formula $i\in T_{1}\cup\{X_{1}^{*}\}$
+\end_inset
+
+
+\color inherit
+.
+ 由此可见
+\begin_inset Formula $A_{1}\cup A_{2}=$
+\end_inset
+
+ 
+\color blue
+
+\begin_inset Formula $\{1,i\}\subset T_{1}^{*}$
+\end_inset
+
+
+\color inherit
+.” 具体怎么错, 就请读者自行感受了.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Exercise
 指出下列证明过程中的不正确之处: 设
 \begin_inset Formula $\{A_{a}\}$
@@ -1912,11 +3190,20 @@ s
 
 \end_deeper
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "reference"
 options "bibtotoc"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
