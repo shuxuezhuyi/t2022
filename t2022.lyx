@@ -3186,6 +3186,430 @@ s
 \end_inset
 
 .''
+\begin_inset Formula $\bigcup$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+的子集族
+\begin_inset Formula $\mathcal{B}_{2}=\{[a,b):a<b\}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}_{5}=\{[a,+\infty):a\in\mathbb{R}\}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}_{6}=\{(-\infty,b):b\in\mathbb{R}\}$
+\end_inset
+
+.
+ 
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+为证
+\begin_inset Formula $\mathcal{B}_{5}\cup\mathcal{B}_{6}$
+\end_inset
+
+是
+\begin_inset Formula $\mathcal{B}_{2}$
+\end_inset
+
+生成拓扑
+\begin_inset Formula $\tau_{\mathcal{B}_{2}}$
+\end_inset
+
+的子基
+\end_layout
+
+\begin_layout Plain Layout
+只要证明
+\begin_inset Formula $\mathcal{B}_{5}\cup\mathcal{B}_{6}$
+\end_inset
+
+中的有限交构成的集合
+\begin_inset Formula $\varphi$
+\end_inset
+
+也生成
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+上拓扑的基
+\end_layout
+
+\begin_layout Plain Layout
+事实上, 
+\begin_inset Formula $\mathcal{B}_{5}\cup\mathcal{\mathcal{B}}_{6}$
+\end_inset
+
+中的有限交只有3种形式
+\end_layout
+
+\begin_layout Plain Layout
+分别是: 
+\begin_inset Formula $\mathcal{B}_{5}$
+\end_inset
+
+与
+\begin_inset Formula $\mathcal{B}_{6}$
+\end_inset
+
+本身以及
+\begin_inset Formula $\mathcal{B}_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow\varphi=\mathcal{B}_{5}\cup\mathcal{B}_{6}\cup\mathcal{B}_{2}\supsetneqq\mathcal{B}_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow\tau_{\varphi}\supsetneqq\tau_{\mathcal{B}_{2}}$
+\end_inset
+
+, i.e.
+ 严格细于
+\begin_inset Formula $\tau_{\mathcal{B}_{2}}$
+\end_inset
+
+ 
+\color red
+ 
+\begin_inset Formula $\leftarrow\varphi\supsetneqq\mathcal{B}_{2}$
+\end_inset
+
+但
+\begin_inset Formula $\tau_{\varphi}=\tau_{\mathcal{B}_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+并集生成
+\begin_inset Formula $\tau_{\mathcal{B}_{2}}$
+\end_inset
+
+的子基.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+记
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+的欧氏拓扑为
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 令
+\begin_inset Formula $T_{1}=\{G-E:G\in T$
+\end_inset
+
+且
+\begin_inset Formula $E\subset\mathbb{Q}\}$
+\end_inset
+
+.
+ 在验证
+\begin_inset Formula $T_{1}$
+\end_inset
+
+是拓扑的过程中, 设
+\begin_inset Formula $\{U_{\alpha}:\alpha\in I\}\subset T_{1}$
+\end_inset
+
+, 需要验证
+\begin_inset Formula $\bigcup_{\alpha\in I}U_{\alpha}\in T_{1}$
+\end_inset
+
+.
+ 按定义, 对每个
+\begin_inset Formula $\alpha\in I$
+\end_inset
+
+, 存在
+\begin_inset Formula $G_{\alpha}\in T$
+\end_inset
+
+与
+\begin_inset Formula $E_{\alpha}\subset\mathbb{Q}$
+\end_inset
+
+使得
+\begin_inset Formula $U_{\alpha}=G_{\alpha}-E_{\alpha}$
+\end_inset
+
+.
+ 很多同学以为
+\begin_inset Formula 
+\[
+\bigcup_{\alpha\in I}(G_{\alpha}-E_{\alpha})=\bigcup_{\alpha\in I}G_{\alpha}-\bigcup_{\alpha\in I}E_{\alpha}\quad\text{或以为}\quad\bigcup_{\alpha\in I}(G_{\alpha}-E_{\alpha})=\bigcup_{\alpha\in I}G_{\alpha}-\bigcap_{\alpha\in I}E_{\alpha}.
+\]
+
+\end_inset
+
+正解是: 设
+\begin_inset Formula 
+\[
+\bigcup_{\alpha\in I}U_{\alpha}=\bigcup_{\alpha\in I}(G_{\alpha}-E_{\alpha})=\bigcup_{\alpha\in I}G_{\alpha}-A,
+\]
+
+\end_inset
+
+则
+\begin_inset Formula $\bigcup_{\alpha\in I}G_{\alpha}\in T$
+\end_inset
+
+且
+\begin_inset Formula $A\subset\mathbb{Q}$
+\end_inset
+
+, 故
+\begin_inset Formula $\bigcup_{\alpha\in I}U_{\alpha}\in T_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+上述
+\begin_inset Formula $(\mathbb{R},T_{1})$
+\end_inset
+
+既不是正则空间, 也不是正规空间: 
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\mathbb{R},T_{1})$
+\end_inset
+
+不是正规的, 即存在闭集
+\begin_inset Formula $A_{1}$
+\end_inset
+
+与
+\begin_inset Formula $A_{2}$
+\end_inset
+
+无法被开集分离
+\begin_inset Formula $(A_{1}\cap A_{2}=\varnothing)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+注意到
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+是闭集, 而若取
+\begin_inset Formula $G=\mathbb{R}$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\forall E\subset\mathbb{Q}$
+\end_inset
+
+, 
+\begin_inset Formula $E$
+\end_inset
+
+也是闭的.
+\end_layout
+
+\begin_layout Plain Layout
+令
+\begin_inset Formula $A_{1}=\mathbb{Z}$
+\end_inset
+
+, 
+\begin_inset Formula $A_{2}=\mathbb{Q\backslash\mathbb{Z}}$
+\end_inset
+
+, 则
+\begin_inset Formula $A_{1}$
+\end_inset
+
+与
+\begin_inset Formula $A_{2}$
+\end_inset
+
+均为闭集.
+ 
+\begin_inset Formula $A_{1}\cap A_{2}=\varnothing$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+此时
+\begin_inset Formula $A_{1}$
+\end_inset
+
+的任一个开邻域中都必有
+\begin_inset Formula $A_{2}$
+\end_inset
+
+的点.
+ 
+\color red
+(其实 
+\begin_inset Formula $\mathbb{Z}\subset\mathbb{R}-\mathbb{Q}\backslash\mathbb{Z}\in\mathcal{N}^{\circ}(\mathbb{Z})$
+\end_inset
+
+ )
+\color inherit
+ 因为
+\begin_inset Formula $1\in A_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $1\notin A_{2}$
+\end_inset
+
+, 而充分大的
+\begin_inset Formula $n\in\mathbb{Z}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $1+1/n\notin A_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $1+1/n\in A_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow(\mathbb{R},T_{1})$
+\end_inset
+
+不是正规空间.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex ProofAsInset
+status open
+
+\begin_layout Plain Layout
+对于
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+上的闭集
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbb{R}-B\in T$
+\end_inset
+
+, 即形成
+\begin_inset Formula $G-E$
+\end_inset
+
+, 
+\begin_inset Formula $G\in T$
+\end_inset
+
+, 
+\begin_inset Formula $E\subset\mathbb{Q}$
+\end_inset
+
+.
+ 取
+\begin_inset Formula $E=\mathbb{Q}$
+\end_inset
+
+, 则
+\begin_inset Formula $B$
+\end_inset
+
+形如
+\begin_inset Formula $\{\mathbb{Q}\}\cup(-\infty,a]\cup[b,+\infty)$
+\end_inset
+
+.
+ 由于
+\begin_inset Formula $B$
+\end_inset
+
+包含了一切有理点, 
+\begin_inset Formula $\mathcal{N}(B)=\{A|B\subset A,A\in T_{1}\}$
+\end_inset
+
+.
+ 而
+\begin_inset Formula $T_{1}$
+\end_inset
+
+中元素均模去部分有理数, 故
+\begin_inset Formula $B\not\subset A$
+\end_inset
+
+, 即无法找到
+\begin_inset Formula $B$
+\end_inset
+
+的邻域.
+ 
+\color red
+(事实上, 如
+\begin_inset Formula $\{\mathbb{Q}\}\cup(-\infty,2]\cup[3,+\infty)\subset(-\infty,\sqrt{2}+1)\cup(\sqrt{2}+1,+\infty)$
+\end_inset
+
+ ).
+
+\color inherit
+ 故
+\begin_inset Formula $(X,T_{1})$
+\end_inset
+
+非正则.
+ 由于正规空间亦涉及到闭集, 故亦找不到邻域, 故
+\begin_inset Formula $(X,T_{1})$
+\end_inset
+
+不是正规空间.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
